@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+    }
+    .buttons-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 50px;
+        width: 250px;
+    }
+
+    button {
+        height: 50px;
+        width: 120px;
+        background: white;
+        color: black;
+        font-weight: 600;
+        border-radius: 5px;
+        border: 2px solid black;
+        cursor: pointer;
+    }
+
+    h1 {
+        font-weight: bold;
+    }
+
+    .button1 {
+        background-color: #4CAF50; /* Verde */
+        color: white;
+    }
+
+    .button2 {
+        background-color: #f44336; /* Vermelho */
+        color: white;
+    }
+</style>
+<title>Pedido Irrecusável</title>
+</head>
+<body>
+<div class="box">
+    <h1><span style="color: blue;">VOCÊ</span> <span style="color: green;">AINDA</span> <span style="color: red;">ME</span> <span style="color: purple;">QUER</span> ?</h1>
+    <div class="buttons-container">
+        <button class="button button1"><a href="https://www.youtube.com/watch?v=SbJN4dDcBzw" style="text-decoration: none; color: inherit;">Sim</a></button>
+        <button class="button button2" id="no">Não</button>
+    </div>
+</div>
+</body>
+<script>
+let button = document.getElementById('no');
+let height = window.innerHeight - 100;
+let width = window.innerWidth - 100;
+
+button.addEventListener('mouseover', function () {
+    button.style.position = "absolute"
+    button.style.top = Math.random() * height + "px";
+    button.style.left = Math.random() * width + "px";
+})
+</script>
+</html>
